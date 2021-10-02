@@ -1,6 +1,7 @@
 import requests
 from pprint import pprint
 import json
+import config
 
 '''
 1. Посмотреть документацию к API GitHub, разобраться как вывести список репозиториев для конкретного пользователя, 
@@ -24,14 +25,13 @@ with open('repos.json', 'w') as f:
 
 VK_API_URL = 'https://api.vk.com/method/'
 METHOD = 'users.get'
-TOKEN = ''
 V = '5.131'
 
 user_ids = 'true42_ab'
 fields = 'online'
 PARAMS = {'user_ids': user_ids,
           'fields': fields,
-          'access_token': TOKEN,
+          'access_token': config.TOKEN,
           'v': V
           }
 
